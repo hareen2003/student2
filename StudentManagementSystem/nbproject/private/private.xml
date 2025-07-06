@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/CourseManagementFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement/config/DatabaseConfig.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/LoginFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/ReportsFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/resources/reports/student_enrollment.jrxml.xml</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/resources/reports/course_distribution.jrxml.xml</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/resources/reports/fee_collection.jrxml.xml</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/StudentManagementFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/DashboardFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement/model/student.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement/dao/StudentDAO.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement2/gui/StudentRegistrationFrame.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement/model/Course.java</file>
+            <file>file:/C:/Users/User/Desktop/StudentManagementSystem/src/com/studentmanagement/dao/CourseDAO.java</file>
+        </group>
+    </open-files>
+</project-private>

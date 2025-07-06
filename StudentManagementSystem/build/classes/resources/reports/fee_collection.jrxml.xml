@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="fee_collection" 
+              pageWidth="595" 
+              pageHeight="842" 
+              columnWidth="555" 
+              leftMargin="20" 
+              rightMargin="20" 
+              topMargin="20" 
+              bottomMargin="20">
+    
+    <field name="studentId" class="java.lang.Integer"/>
+    <field name="studentName" class="java.lang.String"/>
+    <field name="course" class="java.lang.String"/>
+    <field name="amount" class="java.lang.Double"/>
+    <field name="paymentDate" class="java.util.Date"/>
+    
+    <title>
+        <band height="70">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Student Management System]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="30" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Fee Collection Report]]></text>
+            </staticText>
+        </band>
+    </title>
+    
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="70" height="30" backcolor="#4682B4"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Student ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="70" y="0" width="200" height="30" backcolor="#4682B4"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="270" y="0" width="150" height="30" backcolor="#4682B4"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Course]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="0" width="70" height="30" backcolor="#4682B4"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Amount]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="490" y="0" width="65" height="30" backcolor="#4682B4"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Date]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    
+    <detail>
+        <band height="25">
+            <textField>
+                <reportElement x="0" y="0" width="70" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{studentId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="0" width="200" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="0" width="150" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{course}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="420" y="0" width="70" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA["$" + $F{amount}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="490" y="0" width="65" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format($F{paymentDate})]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    
+    <summary>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="420" height="30"/>
+                <textElement textAlignment="Right">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Total Collected: ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="420" y="0" width="70" height="30"/>
+                <textElement>
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["$" + $V{REPORT_SUM}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+    
+    <variable name="REPORT_SUM" class="java.lang.Double" calculation="Sum">
+        <variableExpression><![CDATA[$F{amount}]]></variableExpression>
+    </variable>
+</jasperReport>
