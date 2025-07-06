@@ -12,7 +12,7 @@ public class DatabaseConfig {
     // Added allowPublicKeyRetrieval=true to fix the connection issue
     private static final String URL = "jdbc:mysql://localhost:3306/studentmanagementdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "Dinuwandata$#mysql";
+    private static final String PASSWORD = "Senethma03&Hareen4";
     private static Connection connection;
 
     public static Connection getConnection() throws SQLException {
